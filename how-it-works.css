@@ -1,0 +1,43 @@
+/* how-it-works.css */
+
+/* How It Works Section */
+.how-it-works {
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.how-it-works h2 {
+  font-size: 2.5rem;
+  color: #f0c05a;
+  margin-bottom: 3rem;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.step {
+  max-width: 300px;
+  text-align: center;
+}
+
+.step-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.step h3 {
+  font-size: 1.5rem;
+  color: #8ac6d1;
+  margin-bottom: 1rem;
+}
+
+.step p {
+  font-size: 1rem;
+  color: #ddd;
+}
