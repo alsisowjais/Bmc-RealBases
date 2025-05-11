@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IM Fell English SC', serif;
+  background-image: url('https://i.imgur.com/7n3WzUE.jpg'); /* Avatar-style map or elemental scene */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #f4f4f4;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 2rem 1rem;
+  text-align: center;
+  border-bottom: 5px solid #f45b69;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #f0c05a; /* Earth Kingdom gold */
+  text-shadow: 2px 2px 5px #000;
+  margin-bottom: 1rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #b9dbe4; /* Water Tribe blue */
+}
+
+/* SEARCH BAR */
+.search-container {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.search-container input[type="search"] {
+  padding: 1rem;
+  width: 90%;
+  max-width: 600px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 2px solid #8ac6d1;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  box-shadow: 0 0 10px #8ac6d1aa;
+}
+
+/* FEATURED BASES */
+.featured-bases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.base-card {
+  background: rgba(30, 20, 10, 0.9);
+  border: 2px solid #5b4432;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #000;
+  transition: transform 0.3s;
+}
+
+.base-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #f0c05a88;
+}
+
+.base-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.base-card h3 {
+  padding: 1rem;
+  color: #f0c05a;
+  border-bottom: 1px solid #444;
+}
+
+.base-card p {
+  padding: 0 1rem 1rem;
+  color: #ddd;
+}
+
+/* CATEGORIES */
+.categories {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.categories h2 {
+  margin-bottom: 1rem;
+  color: #f4f4f4;
+}
+
+.categories ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+.categories li {
+  background-color: rgba(0,0,0,0.7);
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  color: white;
+  border: 2px solid #8ac6d1;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.categories li:hover {
+  background-color: #8ac6d1;
+  color: #000;
+}
+
+/* FOOTER */
+footer {
+  background: rgba(0, 0, 0, 0.85);
+  color: #ddd;
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 3px solid #f45b69;
+  margin-top: 2rem;
+}
