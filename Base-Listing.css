@@ -1,0 +1,203 @@
+/* base-listing.css */
+
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base Listing */
+.base-listing {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.listing-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.listing-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.listing-header .description {
+  font-size: 1.2rem;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* Base Details */
+.base-details {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.base-info h2, .base-info h3 {
+  color: #333;
+  font-size: 1.6rem;
+}
+
+.base-info p, .base-info ul {
+  font-size: 1rem;
+  color: #555;
+}
+
+.base-info ul {
+  list-style-type: square;
+  margin-left: 20px;
+}
+
+/* Media Section */
+.media {
+  text-align: center;
+}
+
+.media .images {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.media .images img {
+  width: 30%;
+  border-radius: 10px;
+}
+
+.media .video {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Price Section */
+.price-section {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.price-section .price {
+  font-size: 2rem;
+  color: #f0c05a;
+  font-weight: bold;
+}
+
+/* Seller Info */
+.seller-info {
+  background-color: #f3f3f3;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.seller-info h3 {
+  color: #333;
+  font-size: 1.6rem;
+}
+
+.seller-info p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.verified-badge {
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Contact Seller Button */
+.contact-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.contact-button:hover {
+  background-color: #45a049;
+}
+
+/* Buy Now Button */
+.buy-button {
+  background-color: #f0c05a;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+.buy-button:hover {
+  background-color: #f0b04e;
+}
+
+/* Server Info */
+.server-info {
+  margin-top: 20px;
+}
+
+.server-info h3 {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.server-info p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Tags */
+.tags {
+  margin-top: 20px;
+}
+
+.tags h3 {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.tag {
+  background-color: #f0c05a;
+  color: white;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.tag:hover {
+  background-color: #f0b04e;
+}
+
+/* Ratings & Reviews */
+.ratings-reviews {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.ratings-reviews h3 {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.ratings-reviews p {
+  font-size: 1rem;
+  color: #555;
+}
