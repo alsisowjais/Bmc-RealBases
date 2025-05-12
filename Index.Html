@@ -5,12 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Minecraft Marketplace</title>
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js"></script>
 </head>
 <body>
   <header>
     <h1>Buy & Sell Epic Minecraft Bases for Real Money</h1>
     <p>Your Marketplace for Premium Minecraft Builds</p>
   </header>
+
+  <!-- Login Section -->
+  <div style="text-align:center; margin: 1rem 0;">
+    <button id="googleLoginBtn" style="padding: 10px 20px; background-color: #4285F4; color: white; border: none; border-radius: 8px; cursor: pointer;">
+      Login with Google
+    </button>
+    <p id="user-info" style="margin-top: 10px; color: #4caf50;"></p>
+  </div>
 
   <div class="search-container">
     <input type="search" placeholder="Search for builds...">
@@ -32,7 +44,6 @@
       <h3>Fire Nation Fortress</h3>
       <p>A massive obsidian-and-lava base built into a volcano.</p>
     </div>
-    <!-- Add more base cards here -->
   </section>
 
   <section class="categories">
@@ -55,28 +66,22 @@
   <footer>
     <p>&copy; 2025 Avatar Builds Marketplace. All Nations Welcome.</p>
   </footer>
-</body>
-</html>
 
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+  <!-- Firebase Auth Logic -->
+  <script>
+    // Replace this with your actual Firebase config
+    const firebaseConfig = {
+      apiKey: "IzaSyD2Ljjs4rKKbzaVg1EqOSjL5J5aqMDtp3o",
+      authDomain: "minecraftbasesbmc.firebaseapp.com",
+      projectId: "minecraftbasesbmc",
+      storageBucket: "minecraftbasesbmc.firebasestorage.app",
+      messagingSenderId: "764570834004",
+      appId: "1:764570834004:web:6d453ea7556d15c7db49c1"
+      measurementId: "G-JGT8T3LXL2"
+    };
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyD2Ljjs4rKKbzaVg1EqOSjL5J5aqMDtp3o",
-  authDomain: "minecraftbasesbmc.firebaseapp.com",
-  projectId: "minecraftbasesbmc",
-  storageBucket: "minecraftbasesbmc.firebasestorage.app",
-  messagingSenderId: "764570834004",
-  appId: "1:764570834004:web:6d453ea7556d15c7db49c1",
-  measurementId: "G-JGT8T3LXL2"
-};
 
- // Initialize Firebase
+    // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
     const provider = new firebase.auth.GoogleAuthProvider();
@@ -99,4 +104,3 @@ const firebaseConfig = {
   </script>
 </body>
 </html>
-
