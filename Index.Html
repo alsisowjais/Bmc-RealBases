@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Minecraft Marketplace</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Firebase SDKs -->
-  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js"></script>
 </head>
 <body>
   <header>
@@ -63,48 +59,45 @@
     <p style="text-align: center;">Sellers: Upload your base and start earning real money.</p>
   </section>
 
- <!-- Firebase Auth Logic -->
-  <script>
-    // Replace this with your actual Firebase config
+  <footer>
+    <p>&copy; 2025 Avatar Builds Marketplace. All Nations Welcome.</p>
+  </footer>
+
+  <!-- Firebase Modular SDK (v10+) Auth Logic -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+    import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+
     const firebaseConfig = {
-      apiKey: "IzaSyD2Ljjs4rKKbzaVg1EqOSjL5J5aqMDtp3o",
+      apiKey: "AIzaSyD2Ljjs4rKKbzaVg1EqOSjL5J5aqMDtp3o",
       authDomain: "minecraftbasesbmc.firebaseapp.com",
       projectId: "minecraftbasesbmc",
-      storageBucket: "minecraftbasesbmc.firebasestorage.app",
+      storageBucket: "minecraftbasesbmc.appspot.com",
       messagingSenderId: "764570834004",
-      appId: "1:764570834004:web:6d453ea7556d15c7db49c1"
+      appId: "1:764570834004:web:6d453ea7556d15c7db49c1",
       measurementId: "G-JGT8T3LXL2"
     };
 
-
     // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
-    const provider = new firebase.auth.GoogleAuthProvider();
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
 
     const loginBtn = document.getElementById('googleLoginBtn');
     const userInfo = document.getElementById('user-info');
 
     loginBtn.addEventListener('click', () => {
-      auth.signInWithPopup(provider)
-        .then(result => {
+      signInWithPopup(auth, provider)
+        .then((result) => {
           const user = result.user;
           userInfo.textContent = `Welcome, ${user.displayName}`;
           loginBtn.style.display = 'none';
         })
-        .catch(error => {
+        .catch((error) => {
           console.error("Login error:", error);
-          alert("Login failed.");
+          alert("Login failed. Check console for more info.");
         });
-  
-
-
-  <footer>
-    <p>&copy; 2025 Avatar Builds Marketplace. All Nations Welcome.</p>
-  </footer>
- });
+    });
   </script>
 </body>
 </html>
-
- 
