@@ -8,7 +8,7 @@
 
 body {
   font-family: 'IM Fell English SC', serif;
-  background-image: url('https://images.unsplash.com/photo-1550684376-efcbd6e3f031?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmxhY2slMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww'); /* Avatar-style map or elemental scene */
+  background-image: url('https://images.unsplash.com/photo-1550684376-efcbd6e3f031?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmxhY2slMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -26,14 +26,14 @@ header {
 
 header h1 {
   font-size: 3rem;
-  color: #f0c05a; /* Earth Kingdom gold */
+  color: #f0c05a;
   text-shadow: 2px 2px 5px #000;
   margin-bottom: 1rem;
 }
 
 header p {
   font-size: 1.2rem;
-  color: #b9dbe4; /* Water Tribe blue */
+  color: #b9dbe4;
 }
 
 /* SEARCH BAR */
@@ -43,15 +43,26 @@ header p {
 }
 
 .search-container input[type="search"] {
-  padding: 1rem;
+  padding: 1rem 1.2rem;
   width: 90%;
   max-width: 600px;
-  font-size: 1rem;
-  border-radius: 10px;
-  border: 2px solid #8ac6d1;
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  box-shadow: 0 0 10px #8ac6d1aa;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  border: 2px solid #73e0ff;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  box-shadow: 0 0 12px #73e0ff;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.search-container input[type="search"]::placeholder {
+  color: #aaa;
+}
+
+.search-container input[type="search"]:focus {
+  box-shadow: 0 0 18px #73e0ff;
+  border-color: #73e0ff;
 }
 
 /* FEATURED BASES */
