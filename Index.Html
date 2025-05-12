@@ -93,7 +93,10 @@
           userInfo.textContent = `Welcome, ${user.displayName}`;
           loginBtn.style.display = 'none';
         })
-        .
+        .catch((error) => {
+          console.error("Login error:", error);
+          alert("Login failed. Check console for more info.");
+        });
     });
   </script>
 </body>
